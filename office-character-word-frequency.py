@@ -16,8 +16,44 @@ def show_graph(character, name):
   c2 = [f[1] for f in character]
   # ax needed for putting number on bar graphs
   fig, ax = plt.subplots()
+  # set color depending on character
+  c = 'black'
+  if name == "Michael":
+    c = 'black'
+  elif name == "Dwight":
+    c = 'goldenrod'
+  elif name == "Jim":
+    c = 'royalblue'
+  elif name == "Pam":
+    c = 'mediumorchid'
+  elif name == "Andy":
+    c = 'darkorange'
+  elif name == "Kevin":
+    c = 'darkgreen'
+  elif name == "Angela":
+    c = 'dimgray'
+  elif name == "Erin":
+    c = 'gold'
+  elif name == "Oscar":
+    c = 'peru'
+  elif name == "Darryl":
+    c = 'darkblue'
+  elif name == "Ryan":
+    c = 'sienna'
+  elif name == "Phyllis":
+    c = 'orchid'
+  elif name == "Kelly":
+    c = 'hotpink'
+  elif name == "Toby":
+    c = 'slategrey'
+  elif name == "Stanley":
+    c = 'firebrick'
+  elif name == "Meredith":
+    c = 'orange'
+  elif line[0] == "Creed":
+    c = 'silver'
   # create actual bar graph
-  plt.barh(y_pos, c2, align='center', alpha=0.5)
+  plt.barh(y_pos, c2, align='center', color = c, alpha=0.5)
   width = 0.4
   # label bars with their number
   for i, v in enumerate(c2):
@@ -188,7 +224,6 @@ for season in range(1, 10):
 # finishing up, create all graphs!
 # probably an easier way to loop through this, but with names
 # I just wanted to get it working
-
 michael = top50(michael)
 show_graph(michael, "Michael")
 
